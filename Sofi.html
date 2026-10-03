@@ -1,0 +1,1083 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para alguien especial 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+/* =================================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff8fa;
+    color: #3d3035;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =================================
+   INICIO
+================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffe4ec 0%, transparent 30%),
+        radial-gradient(circle at 80% 80%, #f7dce5 0%, transparent 30%),
+        #fff8fa;
+}
+
+.hero-content {
+    max-width: 600px;
+    animation: aparecer 1.5s ease;
+}
+
+.small-text {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #a97886;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(55px, 14vw, 100px);
+    line-height: .95;
+    font-weight: 400;
+    color: #3d3035;
+}
+
+.hero h1 span {
+    color: #c97f95;
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 450px;
+    margin: 30px auto;
+    color: #796970;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.main-button {
+    border: none;
+    background: #3d3035;
+    color: white;
+
+    padding: 16px 35px;
+    border-radius: 50px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.main-button:hover {
+    transform: translateY(-4px);
+    background: #c97f95;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 30px;
+    font-size: 25px;
+    color: #c97f95;
+    animation: subirBajar 1.5s infinite;
+}
+
+
+/* =================================
+   SECCIONES
+================================= */
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #c97f95;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(45px, 9vw, 75px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+/* =================================
+   HISTORIA
+================================= */
+
+.story {
+    background: #fff;
+}
+
+.story-card {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: #fff8fa;
+}
+
+.story-image {
+    min-height: 500px;
+}
+
+.story-image img {
+    height: 100%;
+}
+
+.story-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 50px;
+}
+
+.story-text span {
+    color: #c97f95;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.story-text h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.story-text p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #796970;
+}
+
+
+/* =================================
+   TARJETAS
+================================= */
+
+.feelings {
+    background: #f8e9ee;
+}
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.love-card {
+    background: white;
+    padding: 40px 30px;
+    text-align: center;
+
+    border-radius: 5px;
+
+    transition: .4s;
+}
+
+.love-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto auto 20px;
+
+    border-radius: 50%;
+
+    background: #f9e1e8;
+    color: #c97f95;
+
+    font-size: 25px;
+}
+
+.love-card h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.love-card p {
+    color: #796970;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/*/* =========================
+   GALERÍA DE RECUERDOS
+========================= */
+
+.gallery {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 240px;
+    display: block;
+    object-fit: cover;
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .gallery img {
+        height: 230px;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 5px;
+    }
+
+    .gallery img {
+        height: 180px;
+        border-radius: 14px;
+    }
+}
+
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 380px) {
+
+    .gallery {
+        gap: 8px;
+    }
+
+    .gallery img {
+        height: 150px;
+        border-radius: 12px;
+    }
+}
+
+
+/* =================================
+   CARTA
+================================= */
+
+.letter {
+    background: #3d3035;
+    color: white;
+    text-align: center;
+}
+
+.letter-container {
+    max-width: 650px;
+    margin: auto;
+}
+
+.envelope {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 25px;
+
+    border: 1px solid #d9a1b1;
+    border-radius: 50%;
+
+    font-size: 30px;
+    color: #e8aabd;
+}
+
+.letter-small {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #d9a1b1;
+}
+
+.letter h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(40px, 8vw, 70px);
+    line-height: 1;
+    font-weight: 400;
+    margin: 25px 0 35px;
+}
+
+.letter-text {
+    color: #d8c8cd;
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+
+/* =================================
+   PREGUNTA FINAL
+================================= */
+
+.question {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, #ffe5ed, transparent 50%),
+        #fff8fa;
+}
+
+.question-content {
+    max-width: 600px;
+}
+
+.question h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(45px, 10vw, 80px);
+    font-weight: 400;
+    line-height: .95;
+}
+
+.heart-big {
+    font-size: 55px;
+    color: #d9859d;
+
+    margin: 25px 0;
+
+    animation: latido 1.3s infinite;
+}
+
+.question h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(55px, 13vw, 100px);
+    line-height: .9;
+    font-weight: 400;
+    color: #c56f8a;
+}
+
+.question-content > p:last-of-type {
+    margin: 30px auto;
+    max-width: 400px;
+    color: #796970;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.yes-button {
+    border: none;
+
+    padding: 17px 30px;
+
+    border-radius: 50px;
+
+    background: #c97f95;
+    color: white;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.yes-button:hover {
+    transform: scale(1.05);
+    background: #3d3035;
+}
+
+.yes-button.second {
+    background: #3d3035;
+}
+
+
+/* =================================
+   FINAL
+================================= */
+
+.final {
+    display: none;
+
+    min-height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background:
+        radial-gradient(circle at center, #f5c9d6, transparent 50%),
+        #fff4f7;
+}
+
+.final.active {
+    display: flex;
+    animation: aparecer 1s ease;
+}
+
+.final-content {
+    max-width: 600px;
+}
+
+.big-heart {
+    font-size: 100px;
+    color: #c97f95;
+
+    animation: latido 1.2s infinite;
+}
+
+.final-content > p:first-of-type {
+    color: #a97886;
+    letter-spacing: 3px;
+}
+
+.final h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(55px, 12vw, 100px);
+    font-weight: 400;
+    line-height: .9;
+    margin: 20px 0;
+}
+
+.final-message {
+    color: #796970;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.stars {
+    margin-top: 30px;
+    color: #c97f95;
+}
+
+
+/* =================================
+   CORAZONES FLOTANTES
+================================= */
+
+.heart-floating {
+    position: fixed;
+
+    bottom: -30px;
+
+    color: #d995a8;
+
+    pointer-events: none;
+
+    animation: flotar 5s linear forwards;
+
+    z-index: 1000;
+}
+
+
+/* =================================
+   ANIMACIONES
+================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes subirBajar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+@keyframes flotar {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* =================================
+   TELÉFONOS
+================================= */
+
+@media (max-width: 700px) {
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .hero {
+        min-height: 100svh;
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .story-card {
+        display: block;
+    }
+
+    .story-image {
+        min-height: 350px;
+    }
+
+    .story-text {
+        padding: 40px 25px;
+    }
+
+    .story-text h3 {
+        font-size: 40px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .love-card {
+        padding: 35px 25px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .photo,
+    .photo-large {
+        height: 220px;
+    }
+
+    .letter {
+        padding: 90px 25px;
+    }
+
+    .question {
+        min-height: 100svh;
+        padding: 70px 20px;
+    }
+
+    .question h1 {
+        font-size: 65px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .yes-button {
+        width: 85%;
+        max-width: 300px;
+    }
+
+    .final h1 {
+        font-size: 65px;
+    }
+
+}
+
+
+/* =================================
+   TELÉFONOS PEQUEÑOS
+================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .question h1 {
+        font-size: 55px;
+    }
+
+    .section-title h2 {
+        font-size: 45px;
+    }
+
+}
+```
+</style>
+
+</head>
+
+<body>
+
+    <!-- Corazones flotantes -->
+    <div class="floating-hearts"></div>
+
+    <!-- =========================
+         SECCIÓN 1 - INICIO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-text">Tengo algo que decirte...</p>
+
+            <h1>
+                Para ti que eres <br>
+                <span>mi hermosa supernova</span> 💗
+            </h1>
+
+            <p class="hero-description">
+                Preparé este pequeño regalo para ti,
+                porque quiero hablar contigo de algo muy especial.
+            </p>
+
+            <button class="main-button" onclick="irAHistoria()">
+                Comenzar ♡
+            </button>
+
+        </div>
+
+        <div class="scroll">
+            ↓
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECCIÓN 2 - HISTORIA
+    ========================== -->
+
+    <section class="story section">
+
+        <div class="section-title">
+
+            <p>CAPÍTULO I</p>
+
+            <h2>
+                Nuestra pequeña<br>
+                historia
+            </h2>
+
+        </div>
+
+        <div class="story-card">
+
+            <div class="story-image">
+                <img src="sofiprimer.jpg" alt="Nuestro recuerdo">
+            </div>
+
+            <div class="story-text">
+
+                <span>Un día cualquiera de abril...</span>
+
+                <h3>
+                    Sin saberlo,<br>
+                    todo comenzó.
+                </h3>
+
+                <p>
+                    A veces las mejores historias comienzan
+                    de la manera más inesperada. Conocerte fue y sera siempre una
+                    de las mejores cosas que me paso en la vida, poco a poco te
+                    convertiste en alguien muy importante
+                    para mí.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECCIÓN 3 - SENTIMIENTOS
+    ========================== -->
+
+    <section class="feelings section">
+
+        <div class="section-title">
+
+            <p>CAPÍTULO II</p>
+
+            <h2>
+                Lo que haces<br>
+                sentirme
+            </h2>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="love-card">
+                <div class="icon">♡</div>
+                <h3>Felicidad</h3>
+                <p>
+                    Porque incluso un día normal
+                    puede convertirse en uno bonito
+                    cuando estás tú.
+                </p>
+            </div>
+
+            <div class="love-card">
+                <div class="icon">✦</div>
+                <h3>Tranquilidad</h3>
+                <p>
+                    Hay algo en tu forma de ser que
+                    hace que todo parezca un poquito
+                    más fácil.
+                </p>
+            </div>
+
+            <div class="love-card">
+                <div class="icon">♡</div>
+                <h3>Mariposas</h3>
+                <p>
+                    Porque todavía consigues hacer
+                    que mi corazón se acelere
+                    de una manera bonita.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECCIÓN 4 - RECUERDOS
+    ========================== -->
+
+    <section class="memories section">
+
+        <div class="section-title">
+
+            <p>CAPÍTULO III</p>
+
+            <h2>
+                Algunos<br>
+                recuerdos
+            </h2>
+
+        </div>
+
+        <div class="gallery">
+
+            <div class="photo photo-large">
+                <img src="sofifecga.jpg" alt="Cuando te pedi ser mi novia">
+            </div>
+
+            <div class="photo">
+                <img src="sofi1.jpg" alt="Recuerdo 2">
+            </div>
+
+            <div class="photo">
+                <img src="sofi2.jpg" alt="Recuerdo 3">
+            </div>
+
+            <div class="photo photo-large">
+                <img src="sofi3.jpg" alt="Recuerdo 4">
+            </div>
+
+                        <div class="photo photo-large">
+                <img src="sofi4.jpg" alt="Recuerdo 4">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECCIÓN 5 - CARTA
+    ========================== -->
+
+    <section class="letter section">
+
+        <div class="letter-container">
+
+            <div class="envelope">♡</div>
+
+            <p class="letter-small">
+                UNA PEQUEÑA CARTA PARA TI
+            </p>
+
+            <h2>
+               De verdad que quisiera decirte<br>
+                demasiadas cosas...
+            </h2>
+
+            <p class="letter-text">
+                Probablemente no encontraría las palabras
+                suficientes para poder decirte lo mucho que siento por ti. Mi amor 
+                de verdad que conocerte es una de las cosas que considero mas especiales para mi,
+                porque tenerte en mi vida ha sido lo mejor del mundo, he aprendido tantas cosas contigo, tanto como
+                como otras en donde he ido aprendiendo de mis errores. 
+<br>
+                Eres la persona mas importante para mi, en ti encuentro un lugar seguro, paz una tranqulidad y indescriptible,
+                eres esa persona que me gustaria tener en mi vida para siempre porque te amo tanto que
+                cuando estoy tan solo poco tiempo sin ti , siento que me falta una parte de mi. 
+<br>
+                Eres una niñaaa increible tanto por dentro como por fueraa, eres muy hermosa en todos los 
+                sentidos, mee encantas demasiado y estoy perdidamente enamorada de ti.
+             <br>
+             
+             Eres esa persona que esta conmigo incondicionalmente a pesar de el desastre de 
+             persona que soy, eres tan lindaaa y tierna conmigoooo, me demuestras de muchas maneras 
+             lo mucho que me amas que de verdad me haces sentir super bien, muy amada. Siempre voy a estar para ti 
+             cuando me necesites, siempre trato de buscar tu felicidad y como te dije muchas veces quiero 
+             amarte, cuidarte, respetarte y demostrarte de la mejor manera cuanto te amo y lo especialque eres para mi.
+             Quiero seguir mejorando junto a ti, crecer junto a ti, quiero hacerr todooo pero contigo a mi lado.
+
+             Ya estoy lista para entregarte mi corazon nuevamente, auque mi corazon siempre sera tuyo
+                
+
+            </p>
+
+            <p class="letter-text">
+                Y quizás ya te diste cuenta de que esta
+                página tiene una razón...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECCIÓN 6 - PREGUNTA
+    ========================== -->
+
+    <section class="question section">
+
+        <div class="question-content">
+
+            <p class="small-text">
+                Y finalmente...
+            </p>
+
+            <h2>
+                Tengo una<br>
+                pregunta para ti.
+            </h2>
+
+            <div class="heart-big">
+                ♥
+            </div>
+
+            <h1>
+                ¿Puedo<br>
+                ser tu novia?
+            </h1>
+
+            <p>
+                No importa cuál sea tu respuesta,
+                gracias por llegar hasta aquí. ♡
+            </p>
+
+            <div class="buttons">
+
+                <button class="yes-button" onclick="respuestaSi()">
+                    Sí, quiero 💗
+                </button>
+
+                <button class="yes-button second" onclick="respuestaSi()">
+                    ¡Claro que sí! 
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECCIÓN 7 - FINAL
+    ========================== -->
+
+    <section class="final" id="final">
+
+        <div class="final-content">
+
+            <div class="big-heart">
+                ♥
+            </div>
+
+            <p>Entonces...</p>
+
+            <h1>
+                Tenemos una<br>
+                nueva historia. ♡
+            </h1>
+
+            <p class="final-message">
+                Y espero que sea una de esas historias
+                que nunca queramos terminar.
+            </p>
+
+            <div class="stars">
+                ✦　♡　✦　♡　✦
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
+
+
